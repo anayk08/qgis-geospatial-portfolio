@@ -1,0 +1,14 @@
+# Analysis environment for the QGIS Geospatial Portfolio.
+#
+# Note: QGIS (and its PyQGIS bindings) is installed via the QGIS / OSGeo4W
+# installer, NOT pip. The packages below cover the standalone Python tooling
+# used alongside QGIS for data prep, validation, and the PostGIS workflow.
+
+GDAL>=3.4              # raster/vector IO, warping, band math
+numpy>=1.22           # array math for raster operations
+psycopg2-binary>=2.9  # PostgreSQL/PostGIS connectivity
+shapely>=2.0          # geometry construction for sample-data generation
+pandas>=1.4           # tabular joins and QA summaries
+
+# QGIS 3.28+ LTR required (provides the `qgis.core`, `qgis.analysis`,
+# `processing`, and `qgis.PyQt` modules imported by the scripts).
